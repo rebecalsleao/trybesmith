@@ -1,6 +1,6 @@
 import ProductsInterface from '../interfaces/products.interface';
 import ProductsModel from '../models/products.model';
-import connection from '../connection';
+import connection from '../models/connection';
 
 class ProductsService {
   model: ProductsModel;
@@ -11,7 +11,14 @@ class ProductsService {
 
   async create(product: ProductsInterface): Promise<ProductsInterface> {
     const addProduct = await this.model.create(product);
-    return addProduct;    
+    
+    return addProduct;
+  }
+
+  async getAll(): Promise<ProductsInterface[]> {
+    console.log('CHEGOU NO SERVICE');
+    const product = await this.model.getAll();
+    return product;
   }
 }
 

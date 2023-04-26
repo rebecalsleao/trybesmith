@@ -16,7 +16,21 @@ export default class ProductsModel {
       [name, amount],
     );
     const getId = result[0].insertId;
-    
+
     return { id: getId, ...addProduct };
+  }
+
+  async getAll(): Promise<ProductsInterface[]> {
+    const result: any[] = await this.connection
+      .execute('SELECT * FROM Trybesmith.products');
+
+    const products = result[0].map((row) => ({
+      id: row.id,
+      name: row.name,
+      amount: row.amount,
+      orderId: row.order_id,
+    }));
+
+    return products as ProductsInterface[];
   }
 }
