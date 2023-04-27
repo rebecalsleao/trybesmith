@@ -16,7 +16,6 @@ class ProductsService {
   }
 
   async getAll(): Promise<ProductsInterface[]> {
-    console.log('CHEGOU NO SERVICE');
     const product = await this.model.getAll();
     return product;
   }
