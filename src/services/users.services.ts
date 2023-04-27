@@ -1,5 +1,5 @@
-import UserInterface from '../interfaces/user.interface';
 import UserModel from '../models/users.model';
+import UserInterface from '../interfaces/user.interface';
 import connection from '../models/connection';
 import TokenService from './token.services';
 
