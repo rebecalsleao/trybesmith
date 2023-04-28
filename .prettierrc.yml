@@ -1,0 +1,7 @@
+trailingComma: 'es5'
+tabWidth: 2
+max_line_length: 100
+# print-width: 70
+semi: true
+tabs: false
+singleQuote: true
