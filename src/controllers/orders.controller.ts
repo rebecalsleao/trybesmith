@@ -11,6 +11,7 @@ class OrderController {
 
   async getAllOrders(_req: Request, res: Response): Promise<void> {
     const orders = await this.orderService.getAllOrders();
+    
     res.status(statusCodes.OK).json(orders);
   }
 }
