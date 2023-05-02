@@ -1,4 +1,4 @@
-const statusCodes = {
+const statusCode = {
   OK: 200,
   NOT_FOUND: 404,
   CREATED: 201,
@@ -7,4 +7,4 @@ const statusCodes = {
   NO_CONTENT: 204,
 };
 
-export default statusCodes;
+export default statusCode;

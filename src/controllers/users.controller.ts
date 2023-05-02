@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import UserService from '../services/users.services';
-import statusCodes from '../statusCode';
+import statusCodes from '../utils/statusCode';
 
 class UserController {
   private userService: UserService = new UserService();
